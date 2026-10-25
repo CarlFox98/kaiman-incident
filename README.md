@@ -19,10 +19,14 @@ A joke website that looks like a law firm ("Meowfurshot Law Group") investigatin
 | `index.html` | Home page — case overview, timeline, call to action |
 | `testimonials.html` | Victim impact statements + submission form + public comments |
 | `evidence.html` | Evidence locker with viewable exhibits + findings |
+| `auth.html` | Log in / sign up |
+| `profile.html` | Your profile |
 
 ## Usage
 
-Open any `.html` file directly in a browser. No build step or server required.
+Live on GitHub Pages at https://carlfox98.github.io/kaiman-incident/, deployed by `.github/workflows/deploy-pages.yml` on every push to `master`.
+
+The pages are static, with no build step. Logins, profiles, comments and testimonial submissions use a [Supabase](https://supabase.com) project. Its URL and public anon key are in `js/supabase-config.js`, and its tables are in `sql/schema.sql`. Opening the `.html` files directly still works for browsing; the logged-in features need that Supabase project.
 
 ## Disclaimer
 
